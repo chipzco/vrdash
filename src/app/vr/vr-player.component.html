@@ -1,13 +1,15 @@
 <h3>vr player</h3>
- <video #video>
+ <video #video controls>
 	<source [src]="url">	
 		Your browser does not support the video tag.
  </video> 
- <p>
-	<button (click)="playpause(video)">{{captionPlaypause}}</button>
+ <p style="margin-left:95px;margin-top:0px;">
+	<!-- <button (click)="playpause(video)">{{captionPlaypause}}</button> -->
 	
- 
-	<button (click)="stop(video)">STOP</button>
+	<button (click)="play(video)"><img src="assets/play.png" width="25" height="25"></button>
+	
+	<button (click)="pause(video)"><img src="assets/pause.png" width="25" height="25"></button>
+	<button (click)="stop(video)"><img src="assets/stop.png" width="25" height="25"></button>
 </p>
 
 
