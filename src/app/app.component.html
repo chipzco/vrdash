@@ -1,14 +1,27 @@
-<h1>
-  {{title}}
-</h1>
+<h1>{{title}}</h1>
 
 <div>
   <a href="#" routerLink="/">HOME</a>   | 
-  <a href="#" routerLink="/dash">DASH</a>	 |
-  <a href="#" routerLink="/vr">VR Player</a>	 |
+  <span *ngIf="!inLoginPage">
+	<a href="#" routerLink="/dash">DASH</a>	 |
+	<a href="#" routerLink="/vr">VR Player</a>	 |
+  </span>	
+  <span *ngIf="inLoginPage" class="inactiveLinks">
+	 DASH | VR Player  
+  </span> 
 </div>
 
+<div class="logininfo">
+	You are currently logged 
+	<span *ngIf="isLoggedIn">
+		in as: 
+		<span class="username">{{username}}</span> 
+	</span>
+	<span *ngIf="!isLoggedIn">
+		out.	
+	</span>
+</div>
 
-<div style="margin-top:10px;">
+<div class="maincontent">
 	<router-outlet></router-outlet>
 </div>	

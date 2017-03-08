@@ -11,10 +11,12 @@ import 'rxjs/add/operator/switchMap';
 
 @Injectable()
 export class AuthService {
-  isLoggedIn: boolean = false;
-
+    isLoggedIn: boolean = false;
+    isInLoginPage: boolean = false;
   // store the URL so we can redirect after logging in
   redirectUrl: string;
+
+  username: string; //username if logged in;
 
   constructor(private http: Http) {}
 
@@ -32,6 +34,7 @@ export class AuthService {
       if (users.findIndex(a => a.username == username && a.pass == pass) >= 0) {
           userFound = true;
           this.isLoggedIn = true;
+          this.username = username;
       }
       return Observable.of(userFound);
   }
