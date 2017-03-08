@@ -7,9 +7,10 @@
 	<a href="#" routerLink="/vr">VR Player</a>	 |
     <a href="#" routerLink="/spotify">Spotify Artists</a>	 |
   </span>	
+  <a *ngIf="isLoggedIn" href="#" (click)="logout($event)">LOG OUT</a>
   <span *ngIf="inLoginPage" class="inactiveLinks">
-	 DASH | VR Player  | Spotify 
-  </span> 
+     DASH | VR Player  | Spotify
+  </span>
 </div>
 
 <div class="logininfo">

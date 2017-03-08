@@ -33,4 +33,12 @@ export class AppComponent {
         this.isLoggedIn = this.authservice.isLoggedIn;
         this.username = this.authservice.username;        
     }    
+    logout(event: Event): void {
+        event.preventDefault();
+        this.authservice.isLoggedIn = false;
+        this.isLoggedIn = false;
+        this.authservice.username = '';
+        this.username = '';
+        this.router.navigate(['/home']);    
+    }
 }
