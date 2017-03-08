@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent }          from './login.component';
 import { VrComponent } from './vr/vr.component';
 import { VrPlayerComponent } from './vr/vr-player.component';
+import { SpotifyComponent } from './spotify/spotify.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { VrPlayerComponent } from './vr/vr-player.component';
     HomeComponent,
 	LoginComponent,
     VrComponent,
-    VrPlayerComponent
+    VrPlayerComponent,
+    SpotifyComponent
   ],
   imports: [
     BrowserModule,
