@@ -40,7 +40,7 @@ export class AuthService {
   }
 
   private load(): Observable<any> {
-      return this.http.get('src/app/users.json'); 
+      return this.http.get('users.json'); 
   }
 
   private handleError(error: any): Observable<any> {
