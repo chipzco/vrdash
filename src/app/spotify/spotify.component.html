@@ -1,3 +1,25 @@
+<h1>Spotify Search</h1>
 <p>
-  spotify works!
+    Type in a artist name in the search box. 
+
+    Then click on an artist to see the albums for this artist. 
 </p>
+
+<div class="searchbox">
+    <input [formControl]="searchBox" id="searchBox" placeholder="Search Spotify artist" />
+</div>
+<div class="artists_column">
+    <div *ngFor="let artist of results | async" class="artist_row">
+        <a class="artist_name" href="#" (click)="getAlbums($event,artist.id,artist.name)">{{ artist.name }}</a>   <span class="pop">Popularity:  {{ artist.popularity }} </span>
+    </div>
+</div>
+<div class="album_column"> 
+    <p *ngIf="selectedArtist">Albums for this artist: <span class="selArtistName">{{selectedArtist}}</span></p>
+    <ul>
+        <li *ngFor="let album of albums | async" class="album_row">
+            {{album.name}}
+        </li>
+
+
+    </ul>
+</div>

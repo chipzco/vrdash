@@ -6,11 +6,13 @@ import { AuthGuard }   from './auth-guard.service';
 import { AuthService }      from './auth.service';
 import { LoginComponent } from './login.component';
 import { VrComponent } from './vr/vr.component';
+import { SpotifyComponent } from './spotify/spotify.component';
 const routes: Routes = [    
     { canActivate: [AuthGuard], path: 'dash', component: DashComponent },
 	{ path: '', component: HomeComponent },
     { path: 'login', component: LoginComponent },
     { canActivate: [AuthGuard], path: 'vr', component: VrComponent },
+    { canActivate: [AuthGuard], path: 'spotify', component: SpotifyComponent },
     { path: '**', redirectTo: '/', pathMatch: 'full' }	
 ];
 

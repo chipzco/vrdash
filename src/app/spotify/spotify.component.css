@@ -1,0 +1,45 @@
+.artist_row {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:medium;
+    margin-top:3px;
+}
+a.artist_name:visited,a.artist_name:link {
+    color: green;
+    text-decoration: none;
+}
+a.artist_name:hover {
+    text-decoration: underline;
+    color:red;
+}
+.pop {
+    color:dimgrey;
+    font-size:smaller;
+}
+.artists_column {
+    clear:both;   
+    float:left; 
+    margin-left:5px;
+}
+.album_column {
+    float:left;
+    margin-left:55px;
+}
+.album_column p, .album_column ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.searchbox {
+    clear: both;
+    margin-bottom:50px;
+}
+.album_row {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:medium;
+    margin-top:3px;
+    color: blueviolet;
+}
+.selArtistName {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:crimson;
+    font-weight:bold;
+}
